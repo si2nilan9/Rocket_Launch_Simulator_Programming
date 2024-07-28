@@ -49,18 +49,18 @@ public class RocketLaunchSimulator {
             }
             if (stage.equals("1") && fuel < 50) {
                 System.out.println("Stage 1 complete. Separating stage. Entering Stage 2.");
-                stage = "2";
-                fuel = 50;
-                altitude += 400;
-                speed += 40000;
+                stage = "2";  // if it enters 2nd stage, it increases its speed 40 times
+                fuel = 50;   // Continue its fuel 
+                altitude += 400; // As speed increases, distance increases
+                speed += 40000;  // Custom settings
             }
         }
     }
 
     private void updateParameters() {
-        fuel -= 1;
-        altitude += 10;
-        speed += 1000;
+        fuel -= 1;       //Decreases by 1 level for each second
+        altitude += 10; // Initial distance increases by 10 km
+        speed += 1000; //  Regular Stage 1 Speed as 1000 km/h
     }
     
     private void displayStatus() {
@@ -70,7 +70,7 @@ public class RocketLaunchSimulator {
 
     public void reset() {
         stage = "Pre-Launch";
-        fuel = 100.0;
+        fuel = 100.0;  // Initial full level
         altitude = 0;
         speed = 0;
         checksComplete = false;
