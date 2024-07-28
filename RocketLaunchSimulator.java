@@ -43,7 +43,7 @@ public class RocketLaunchSimulator {
                 System.out.println("Mission Failed due to insufficient fuel.");
                 break;
             }
-            if (stage.equals("2") && altitude >= 1000) {
+            if (stage.equals("2") && altitude >= 1200) {
                 System.out.println("Orbit achieved! Mission Successful.");
                 break;
             }
