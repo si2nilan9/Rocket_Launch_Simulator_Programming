@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class RocketLaunchSimulator {
 
-	private String stage = "Pre-Launch";
+    private String stage = "Pre-Launch";
     private double fuel = 100.0;
     private int altitude = 0;
     private int speed = 0;
